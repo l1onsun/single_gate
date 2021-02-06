@@ -1,6 +1,6 @@
 name: Test
 
-on: 
+on:
   pull_request: {}
   push:
     branches: master
@@ -34,8 +34,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build docker image
-        run: docker build . -t test_cook:test
+        run: docker build . -t single_gate:test
 
       - name: Smoke test docker image
         run: |
-          docker run --rm test_cook:test 10
+          docker run --rm single_gate:test 10
