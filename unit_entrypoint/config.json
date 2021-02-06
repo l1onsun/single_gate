@@ -1,0 +1,15 @@
+{
+    "listeners": {
+        "*:8000": {
+            "pass": "applications/single_gate"
+        }
+    },
+    "applications": {
+        "single_gate": {
+            "type": "python 3",
+            "path": "/single_gate/",
+            "module": "asgi",
+            "callable": "app"
+        }
+    }
+}

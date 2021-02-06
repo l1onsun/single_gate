@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  single_gate:
+    build: .
+    container_name: single_gate
+    network_mode: host
+
